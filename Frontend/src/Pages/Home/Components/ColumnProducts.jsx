@@ -17,7 +17,11 @@ function ColumnProducts({ className, cardWidth }) {
   }, []);
   const cartSelector = useSelector((state) => state.cart.items);
   console.log(cartSelector.length);
-
+  const wishSelector = useSelector((state) => state.wishlist.items);
+  console.log(wishSelector);
+  const isInWishlist = (id) => {
+    return wishSelector.some((item) => item.id === id);
+  };
   return (
     <>
       <div className="w-4/5 mx-auto my-15 font-poppins">
@@ -44,8 +48,14 @@ function ColumnProducts({ className, cardWidth }) {
                     >
                       <div className="bg-white p-3 mt-2 mr-3 rounded-full shadow-md hover:bg-red-500 hover:text-white transition">
                         <CiHeart
-                          onClick={() => dispatch(addToWishlist(items))}
-                          className="text-xl cursor-pointer"
+                          onClick={() =>
+                            isInWishlist(items.id)
+                              ? dispatch(removeFromWishlist(items.id))
+                              : dispatch(addToWishlist(items))
+                          }
+                          className={`text-xl cursor-pointer ${
+                            isInWishlist(items.id) ? 'text-red-500' : ''
+                          }`}
                         />
                       </div>
 
