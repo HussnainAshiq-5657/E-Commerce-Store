@@ -4,8 +4,7 @@ import Google from '../../../assets/Icon-Google.png';
 import { NavLink } from 'react-router';
 
 function LoginForm() {
-  // Action function for validation
-  async function handleLogin(prevState, formData) {
+  async function handleLogin(formData) {
     const emailOrPhone = formData.get('emailOrPhone');
     const password = formData.get('password');
 

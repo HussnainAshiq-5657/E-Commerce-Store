@@ -11,11 +11,11 @@ function Header() {
   return (
     <>
       <header className="rounded-lg p-4 border-b-2 border-gray-400 shadow-sm shadow-gray-100 bg-gray-300 sticky top-0 z-50">
-        <div className="w-4/5 mx-auto flex justify-around items-center">
+        <div className="w-4/5 mx-auto flex justify-between items-center">
           <NavLink to="/" className="me-4">
-            <h1 className="text-2xl font-bold">NexCart</h1>
+            <h1 className="text-2xl font-bold">TrendWave</h1>
           </NavLink>
-          <div className="flex items-center gap-4 px-4">
+          <div className="flex justify-between items-center gap-4 px-4">
             <DesktopMenu />
             <div className=" hidden md:flex">
               <Searchbar />
