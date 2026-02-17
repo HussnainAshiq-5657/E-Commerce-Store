@@ -50,7 +50,7 @@ function ColumnProducts({ className, cardWidth }) {
                         <CiHeart
                           onClick={() =>
                             isInWishlist(items.id)
-                              ? dispatch(removeFromWishlist(items.id))
+                              ? dispatch(removeFromWishlist(items))
                               : dispatch(addToWishlist(items))
                           }
                           className={`text-xl cursor-pointer ${

@@ -64,7 +64,7 @@ function CartDetails() {
 
                     <td className="px-6 py-4">
                       <button
-                        onClick={() => dispatch(removeFromCart(item.id))}
+                        onClick={() => dispatch(removeFromCart(item))}
                         className="bg-danger cursor-pointer text-white px-3 py-1  hover:bg-red-600 rounded-xl transition delay-100 duration-300 ease-initial hover:scale-110 hover:-bg-conic-180translate-y-1"
                       >
                         Remove
