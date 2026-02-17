@@ -24,7 +24,6 @@ function WishListItems() {
     dispatch(FetchProducts());
   }, [dispatch]);
 
-  // Check if item is in wishlist
   const isInWishlist = (id) => wishSelector.some((item) => item.id === id);
 
   if (!wishSelector || wishSelector.length === 0) {
@@ -64,7 +63,6 @@ function WishListItems() {
               key={item.id}
               className="flex flex-col bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 overflow-hidden h-full  min-w-0 shrink-0"
             >
-              {/* Product Image + Overlay */}
               <div className="relative bg-gray-100 p-6 flex items-center justify-center h-56 group">
                 <img
                   src={item.image}
@@ -73,7 +71,6 @@ function WishListItems() {
                 />
 
                 <div className="absolute inset-0 flex flex-col justify-start items-end gap-4 opacity-0 group-hover:opacity-100 bg-black/10 transition duration-300">
-                  {/* Wishlist Heart */}
                   <div className="bg-white p-3 mt-2 mr-3 rounded-full shadow-md hover:bg-red-500 hover:text-white transition">
                     <CiHeart
                       onClick={() =>
@@ -87,7 +84,6 @@ function WishListItems() {
                     />
                   </div>
 
-                  {/* View Icon */}
                   <div className="bg-white p-3 mt-1 mr-3 rounded-full shadow-md hover:bg-indigo-500 hover:text-white transition">
                     <FaRegEye className="text-xl cursor-pointer" />
                   </div>
