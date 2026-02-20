@@ -6,7 +6,7 @@ This project demonstrates scalable folder architecture, clean UI development, ca
 ![React](https://img.shields.io/badge/React-61dafb?style=flat&logo=react) ![Redux](https://img.shields.io/badge/Redux-764abc?style=flat&logo=redux) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38bdf8?style=flat&logo=tailwindcss) ![Material-UI](https://img.shields.io/badge/Material_UI-007FFF?style=flat&logo=mui)
 
 
-Live Demo : https://mha-e-commerce-project.netlify.app/
+Live Demo : https://mha-e-commerce-store.netlify.app/
 
 🚀 Features
 
